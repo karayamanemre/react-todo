@@ -6,7 +6,12 @@ export default class ToDosList extends Component {
     return (
       <ul>
         {this.props.todos.map((todo) => (
-          <ToDoItem key={todo.id} todo={todo} />
+          <ToDoItem
+            key={todo.id}
+            todo={todo}
+            handleChangeProps={this.props.handleChangeProps}
+            deleteTodoProps={this.props.deleteTodoProps}
+          />
         ))}
       </ul>
     );
